@@ -22,14 +22,16 @@ A fully functional React-based Ecommerce application inspired by Nxt Trendz, fea
 
 🚀 Live Demo
 
-(Add your deployment link here when hosted)
-
+(https://TrendProducts.ccbp.tech)
+---
 🔐 Login Details (For Testing)
 
 Use the following credentials to log in:
 
 Username: rahul
 Password: rahul@2021
+
+---
 
 📂 Project Structure
 src/
@@ -54,7 +56,7 @@ src/
  ├── index.js
  ├── App.css
  └── index.css
-
+---
 ✨ Features
 🔐 Authentication
 
@@ -103,7 +105,7 @@ Price
 Quantity
 
 Cart image hidden when items exist
-
+---
 🧰 Tech Stack
 
 React JS
@@ -117,7 +119,7 @@ js-cookie
 REST API integration
 
 CSS Flexbox & Responsive Layout
-
+---
 🔗 APIs Used
 
 Base URL:
@@ -129,29 +131,13 @@ Login	/login
 Get Products	/products
 Product Details	/products/:id
 Prime Deals	/prime-deals
-🛠 Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/leela-33/React-Ecommerce-APP.git
-cd React-Ecommerce-APP
 
-2️⃣ Install Dependencies
-npm install
-
-3️⃣ Start App
-npm start
-
-4️⃣ Build for Production
-npm run build
-
-📸 Screenshots
-
-(Add your UI screenshots here)
 
 🤝 Contributing
 
 Pull requests are welcome!
 Feel free to open an issue for feature requests or bug fixes.
-
+---
 📜 License
 
 This project is open-source and free to use.
