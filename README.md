@@ -18,6 +18,8 @@ A fully functional React-based Ecommerce application inspired by Nxt Trendz, fea
 
 🔄 Protected Routes with JWT
 
+---
+
 🚀 Live Demo
 
 (Add your deployment link here when hosted)
