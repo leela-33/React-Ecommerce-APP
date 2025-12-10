@@ -1,89 +1,52 @@
 .cart-container {
-  padding: 20px;
-  width: 100%;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-.cart-img {
-  width: 200px;
-  margin-bottom: 20px;
-}
-
-.cart-container h1 {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #3b3b3b;
-}
-
-.cart-container p {
-  font-size: 16px;
-  color: #616161;
-}
-
-.cart-items-list,
-.cart-items-list ul {
-  list-style-type: none;
-  padding-left: 0px;
-}
-
-.cart-item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-  margin: 12px 0;
-  border: 1px solid #d7dfe9;
-  border-radius: 8px;
-  background-color: #ffffff;
+  justify-content: center;
+  min-height: 75vh;
 }
 
-.cart-item:hover {
-  background-color: #f8faff;
-  transition: 0.2s ease-in-out;
+@media screen and (min-width: 768px) {
+  .cart-container {
+    min-height: 90vh;
+  }
 }
 
-.cart-item-img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-right: 20px;
+.cart-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1110px;
 }
 
-.cart-item p {
-  flex-grow: 1;
-  text-align: left;
-  margin: 4px 10px;
-  font-size: 15px;
+@media screen and (min-width: 768px) {
+  .cart-content-container {
+    width: 80%;
+    max-width: 1110px;
+  }
 }
 
-.cart-item button {
-  padding: 6px 10px;
-  background-color: #ff0b37;
-  color: white;
+.cart-heading {
+  color: #3e4c59;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .cart-heading {
+    font-size: 48px;
+  }
+}
+
+.remove-all-btn {
+  background: transparent;
   border: none;
-  border-radius: 6px;
+  color: #0b69ff;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
+  padding: 0;
 }
 
-.cart-item button:hover {
-  background-color: #d1002f;
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 600px) {
-  .cart-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .cart-item-img {
-    margin-bottom: 10px;
-  }
-
-  .cart-item p {
-    margin: 4px 0;
-  }
+.remove-all-btn:hover {
+  text-decoration: underline;
 }
