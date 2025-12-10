@@ -1,50 +1,41 @@
-import CartContext from '../../context/CartContext'
 import Header from '../Header'
+import CartListView from '../CartListView'
+
+import CartContext from '../../context/CartContext'
+import EmptyCartView from '../EmptyCartView'
+import CartSummary from '../CartSummary'
+
 import './index.css'
 
 const Cart = () => (
   <CartContext.Consumer>
     {value => {
-      const {cartList} = value
-
-      const isEmpty = cartList.length === 0
+      const {cartList, removeAllCartItems} = value
+      const showEmptyView = cartList.length === 0
 
       return (
         <>
           <Header />
           <div className="cart-container">
-            {/* Show cart image ONLY if empty */}
-            {isEmpty && (
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-img.png"
-                alt="cart"
-                className="cart-img"
-              />
-            )}
-
-            <h1>Your Cart Items</h1>
-
-            {isEmpty ? (
-              <p>No items added yet.</p>
+            {showEmptyView ? (
+              <EmptyCartView />
             ) : (
-              <ul className="cart-items-list">
-                {cartList.map(item => (
-                  <li key={item.id} className="cart-item">
-                    <img
-                      src={item.imageUrl}
-                      alt={item.title}
-                      className="cart-item-img"
-                    />
+              <div className="cart-content-container">
+                <div className="cart-header-row">
+                  <h1 className="cart-heading">My Cart</h1>
+                  <button
+                    type="button"
+                    className="remove-all-btn"
+                    onClick={removeAllCartItems}
+                    data-testid="removeAll"
+                  >
+                    Remove All
+                  </button>
+                </div>
 
-                    <div className="cart-item-details">
-                      <p>{item.title}</p>
-                      <p>Brand: {item.brand}</p>
-                      <p>Price: Rs {item.price}/-</p>
-                      <p>Quantity: {item.quantity}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                <CartListView />
+                <CartSummary />
+              </div>
             )}
           </div>
         </>
