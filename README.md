@@ -22,7 +22,7 @@ A fully functional React-based Ecommerce application inspired by Nxt Trendz, fea
 
 🚀 Live Demo
 
-(https://TrendProducts.ccbp.tech)
+(https://nxtz.ccbp.tech/login)
 ---
 🔐 Login Details (For Testing)
 
